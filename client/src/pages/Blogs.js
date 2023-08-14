@@ -15,9 +15,10 @@ const Blogs = () => {
     }
   }
   useEffect(() => {
-    getAllBlogs();
-    console.log(blogs);
+    getAllBlogs()
+    // console.log(blogs);
   }, []);
+
   return (
     <div style={{display: 'flex', flexWrap: "wrap"}}>
       {blogs && blogs.length > 0 && blogs.map((blog) => 

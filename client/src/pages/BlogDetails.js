@@ -27,8 +27,8 @@ const BlogDetails = () => {
   };
 
   useEffect(() => {
-    getBlogDetail();
-  }, [id]);
+    getBlogDetail()
+  }, );
 
   // input change
   const handleChange = (e) => {
