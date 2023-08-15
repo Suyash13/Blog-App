@@ -16,8 +16,8 @@ const Blogs = () => {
   }
   useEffect(() => {
     getAllBlogs()
-    // console.log(blogs);
-  }, []);
+    console.log(blogs);
+  }, );
 
   return (
     <div style={{display: 'flex', flexWrap: "wrap"}}>
