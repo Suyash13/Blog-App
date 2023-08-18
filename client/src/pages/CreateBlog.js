@@ -25,7 +25,7 @@ const CreateBlog = () => {
         // console.log(inputs);
         try {
             // const id = localStorage.getItem("userId");
-            const {data} = await axios.post('/api/v1/blog/create-blog', {
+            const {data} = await axios.post('https://blog-app-xjhg.onrender.com/api/v1/blog/create-blog', {
                 title: inputs.title,
                 description: inputs.description,
                 image: inputs.image,

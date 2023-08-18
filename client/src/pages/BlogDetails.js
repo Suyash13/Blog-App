@@ -12,7 +12,7 @@ const BlogDetails = () => {
   // get blog details
   const getBlogDetail = async () => {
     try {
-      const { data } = await axios.get(`/api/v1/blog/get-blog/${id}`);
+      const { data } = await axios.get(`https://blog-app-xjhg.onrender.com/api/v1/blog/get-blog/${id}`);
       if (data?.success) {
         setBlog(data?.blog);
         setInputs({
@@ -27,8 +27,8 @@ const BlogDetails = () => {
   };
 
   useEffect(() => {
-    getBlogDetail()
-  });
+    getBlogDetail();
+  }, [id]);
 
   // input change
   const handleChange = (e) => {
@@ -41,7 +41,7 @@ const BlogDetails = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.put(`/api/v1/blog/update-blog/${id}`, {
+      const { data } = await axios.put(`https://blog-app-xjhg.onrender.com/api/v1/blog/update-blog/${id}`, {
         title: inputs.title,
         description: inputs.description,
         image: inputs.image,

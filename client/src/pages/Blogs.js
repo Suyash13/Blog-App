@@ -5,7 +5,7 @@ const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const getAllBlogs = async (req, res) => {
     try {
-      const {data} = await axios.get("/api/v1/blog/all-blogs")
+      const {data} = await axios.get("https://blog-app-xjhg.onrender.com/api/v1/blog/all-blogs")
       if(data?.success) {
         setBlogs(data?.blogs);
         console.log(data);
